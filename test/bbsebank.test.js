@@ -18,7 +18,7 @@ contract("BBSEBank", (accounts) => {
 
     it("should set the yearly return rate correctly", async () => {
       assert.equal(await bbseBank.yearlyReturnRate(), 10);
-    });
+    }); 
 
     it("should deposit correctly", async () => {
       await bbseBank.deposit({ value: 10 ** 18, from: accounts[1] }); // Decimal is set to 18 by default in ERC20 OpenZeppelin (Unit = Wei)
